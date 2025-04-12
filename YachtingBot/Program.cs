@@ -158,6 +158,12 @@ async Task VerifyAnswer(long userId, string text)
 {
     try
     {
+        if (text.ToLowerInvariant() == "совбез")
+        {
+            await SendPlanktonich(userId);
+            return;
+        }
+
         var q = manager.GetCurrent(userId);
         var answerResult = q.CheckAnswer(text);
         if (answerResult == AnswerResults.Incorrect)
@@ -246,5 +252,11 @@ async Task MoveToNextQuestion(long l)
 async Task SendTestingDone(long userId)
 {
     await bot.SendMessage(userId, "Поздравляю, вы прошли тест!", ParseMode.Html, replyMarkup: new ReplyKeyboardRemove());
+}
+
+async Task SendPlanktonich(long userId)
+{
+    var sticker = (await bot.GetStickerSet("ozero")).Stickers[44];
+    await bot.SendSticker(userId, InputFile.FromFileId(sticker.FileId));
 }
 
