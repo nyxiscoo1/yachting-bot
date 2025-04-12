@@ -101,6 +101,9 @@ async Task HandleCommand(long userId, string command)
         case "/skip":
             await HandleSkipCommand(userId);
             break;
+        case "/answer":
+            await HandleAnswerCommand(userId);
+            break;
     }
 
     await Task.CompletedTask;
@@ -228,6 +231,21 @@ async Task HandleSkipCommand(long userId)
     try
     {
         await MoveToNextQuestion(userId);
+    }
+    catch (TestNotStartedException)
+    {
+        await HandleStartCommand(userId);
+    }
+}
+
+async Task HandleAnswerCommand(long userId)
+{
+    try
+    {
+        var q = manager.GetCurrent(userId);
+
+        var msg = "Правильный ответ: \n" + string.Join("\n", q.RightAnswers);
+        await bot.SendMessage(userId, msg, ParseMode.Html, replyMarkup: KeyboardFromVariants(q));
     }
     catch (TestNotStartedException)
     {
