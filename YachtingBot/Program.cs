@@ -32,7 +32,11 @@ bot.StartReceiving(
 
 // Tell the user the bot is online
 Console.WriteLine("Start listening for updates. Press enter to stop");
+#if DEBUG
 Console.ReadLine();
+#else
+cts.Token.WaitHandle.WaitOne();
+#endif
 
 // Send cancellation request to stop the bot
 cts.Cancel();
