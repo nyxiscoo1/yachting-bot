@@ -1,14 +1,24 @@
-﻿using Telegram.Bot;
+﻿using System.Text;
+using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 using YachtingBot;
 
+var tokenPath = Path.Combine(AppContext.BaseDirectory, "token.txt");
+if (!File.Exists(tokenPath))
+{
+    Console.WriteLine($"Задайте токен в файле {tokenPath}");
+    return 1;
+}
+
+var token = File.ReadAllText(tokenPath, Encoding.UTF8);
+
 var source = new QuestionSource();
 var data = source.LoadQuestions();
 var manager = new QuestingManager(data);
 
-var bot = new TelegramBotClient("<your_token>");
+var bot = new TelegramBotClient(token);
 
 using var cts = new CancellationTokenSource();
 
@@ -25,6 +35,8 @@ Console.ReadLine();
 
 // Send cancellation request to stop the bot
 cts.Cancel();
+
+return 0;
 
 
 // Each time a user interacts with the bot, this method is called
