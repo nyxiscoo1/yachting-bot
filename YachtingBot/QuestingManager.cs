@@ -14,11 +14,14 @@ public class QuestingManager
     private IReadOnlyList<QuestionInfo> LoadQuestions()
     {
         var result = new List<QuestionInfo>();
-        var shuffled = _source.ToArray();
-        Random.Shared.Shuffle(shuffled);
+        var shuffledQuestions = _source.ToArray();
+        Random.Shared.Shuffle(shuffledQuestions);
 
-        foreach (var q in shuffled)
+        foreach (var q in shuffledQuestions)
         {
+            var shuffledVariants = q.Variants.ToArray();
+            Random.Shared.Shuffle(shuffledVariants);
+
             result.Add(new QuestionInfo
             {
                 Index = result.Count + 1,
@@ -26,7 +29,7 @@ public class QuestingManager
                 Question = q.Question,
                 Text = q.Text,
                 RightAnswers = q.RightAnswers,
-                Variants = q.Variants,
+                Variants = shuffledVariants,
                 AnswerThreshold = q.AnswerThreshold ?? q.RightAnswers.Length,
                 NoKeyboard = q.NoKeyboard
             });

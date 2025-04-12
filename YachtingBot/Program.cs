@@ -17,6 +17,7 @@ var token = File.ReadAllText(tokenPath, Encoding.UTF8);
 var source = new QuestionSource();
 var data = source.LoadQuestions();
 var manager = new QuestingManager(data);
+var keyboardLayoutBuilder = new KeyboardLayoutBuilder();
 
 var bot = new TelegramBotClient(token);
 
@@ -141,10 +142,10 @@ ReplyMarkup? KeyboardFromVariants(QuestionInfo q)
     if (q.NoKeyboard)
         return new ReplyKeyboardRemove();
 
-    var shuffled = q.Variants.ToArray();
-    Random.Shared.Shuffle(shuffled);
-    return new ReplyKeyboardMarkup(shuffled.Select(x =>
-        new[] { new KeyboardButton(x) }))
+    var layout = keyboardLayoutBuilder.ForVariants(q.Variants);
+
+    return new ReplyKeyboardMarkup(layout.Select(r =>
+        r.Select(x => new KeyboardButton(x))))
     {
         ResizeKeyboard = false
     };
