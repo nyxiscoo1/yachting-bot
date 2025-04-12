@@ -62,6 +62,7 @@ public class QuestionSource
                 "Судовая роль",
                 "Сертификат шкипера",
                 "Паспорта членов экипажа",
+
             ],
             RightAnswers = [0, 1, 2, 3, 4, 5, 6],
             AnswerThreshold = 5,
@@ -204,6 +205,7 @@ public class QuestionSource
             RightAnswer = 2
         };
 
+
         // 15
         yield return new MatchingQuestion
         {
@@ -215,6 +217,605 @@ public class QuestionSource
                 ["Пластик"] = "Никогда",
                 ["Кожура от бананов, огрызки"] = "Можно, но не в рекреационных зонах",
             }
+        };
+        //  16
+        yield return new SimpleQuestion
+        {
+            Image = "/6.jpg",
+            Text = "Выберите название части яхты указанное цифрой 1",
+            Variants = [
+               "Гик",
+                "Аппарель",
+                "Форштаг",
+                "Ванта"
+
+           ],
+            RightAnswer = 2
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/6.jpg",
+            Text = "Выберите название части яхты указанное цифрой 2",
+            Variants = [
+                "Гик",
+                "Рубка",
+                "Леер",
+                "Ванта"
+
+        ],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/6.jpg",
+            Text = "Выберите название части яхты указанное цифрой 3",
+            Variants = [
+                "Леер",
+                "Рубка",
+                "Аппарель",
+                "Ванта"
+
+      ],
+            RightAnswer = 2
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/6.jpg",
+            Text = "Выберите название части яхты указанное цифрой 4",
+            Variants = [
+                "Кокпит",
+                "Реллинг",
+                "Аппарель",
+                "Леер"
+
+ ],
+            RightAnswer = 3
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/6.jpg",
+            Text = "Выберите название части яхты указанное цифрой 5",
+            Variants = [
+                "Кокпит",
+                "Реллинг",
+                "Аппарель",
+                "Леер"
+
+],
+            RightAnswer = 1
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/6.jpg",
+            Text = "Выберите название части яхты указанное цифрой 6",
+            Variants = [
+                 "Ванта",
+                "Реллинг",
+                "Аппарель",
+                "Леер"
+
+],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/6.jpg",
+            Text = "Выберите название части яхты указанное цифрой 7",
+            Variants = [
+                "Ванта",
+                "Реллинг",
+                "Бак",
+                "Леер"
+
+],
+            RightAnswer = 2
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/6.jpg",
+            Text = "Выберите название части яхты указанное цифрой 8",
+            Variants = [
+                "Аппарель",
+                "Реллинг",
+                "Кокпит",
+                "Рубка"
+
+],
+            RightAnswer = 3
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/6.jpg",
+            Text = "Выберите название части яхты указанное цифрой 9",
+            Variants = [
+                "Бак",
+                "Реллинг",
+                "Кокпит",
+                "Рубка"
+
+],
+            RightAnswer = 2
+        };
+        //  17
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 1",
+            Variants = [
+               "Грот",
+                "Краспицы",
+                "Ахтерштаг",
+                "Перо"
+
+           ],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 2",
+            Variants = [
+              "Грот",
+                "Краспицы",
+                "Ахтерштаг",
+                "Перо"
+
+          ],
+            RightAnswer = 2
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 3",
+            Variants = [
+              "Топ",
+                "Ванты",
+                "Ахтерштаг",
+                "Гик"
+
+          ],
+            RightAnswer = 3
+        };
+
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 4",
+            Variants = [
+                 "Топ",
+                "Ванты",
+                "Перо",
+                "Гик"
+
+  ],
+            RightAnswer = 2
+        };
+
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 5",
+            Variants = [
+                 "Киль",
+                "Бульб",
+                "Ахтерштаг",
+                "Перо"
+
+  ],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 6",
+            Variants = [
+              "Киль",
+                "Бульб",
+                "Ахтерштаг",
+                "Форштаг"
+
+],
+            RightAnswer = 1
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 7",
+            Variants = [
+           "Краспицы",
+                "Топ",
+                "Ахтерштаг",
+                "Ванты"
+
+],
+            RightAnswer = 3
+        };
+
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 8",
+            Variants = [
+              "Киль",
+                "Бульб",
+                "Краспицы",
+                "Перо"
+
+],
+            RightAnswer = 2
+        };
+
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 9",
+            Variants = [
+           "Киль",
+                "Бульб",
+                "Ахтерштаг",
+                "Форштаг"
+
+],
+            RightAnswer = 3
+        };
+
+        yield return new SimpleQuestion
+        {
+            Image = "/5.jpg",
+            Text = "Выберите название части яхты указанное цифрой 10",
+            Variants = [
+           "Топ",
+                "Бульб",
+                "Киль",
+                "Форштаг"
+
+],
+            RightAnswer = 0
+        };
+        //  18
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 1",
+            Variants = [
+               "Фаловый угол",
+                "Галсовый угол",
+                "Шкотовый угол",
+
+
+           ],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 2",
+            Variants = [
+           "Фаловый угол",
+                "Уф-защита",
+                "Передняя шкаторина",
+
+           ],
+            RightAnswer = 1
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 3",
+            Variants = [
+        "Нижняя шкаторина",
+                "Грот",
+                "Передняя шкаторина",
+
+           ],
+            RightAnswer = 2
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 4",
+            Variants = [
+              "Фаловый угол",
+                "Стаксель",
+                "Латы",
+
+           ],
+            RightAnswer = 1
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 5",
+            Variants = [
+        "Нижняя шкаторина",
+                "Задняя шкаторина",
+                "Передняя шкаторина",
+
+           ],
+            RightAnswer = 1
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 6",
+            Variants = [
+              "Фаловый угол",
+                "Галсовый угол",
+                "Шкотовый угол",
+
+           ],
+            RightAnswer = 1
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 7",
+            Variants = [
+   "Нижняя шкаторина",
+                "Задняя шкаторина",
+                "Передняя шкаторина",
+
+           ],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 8",
+            Variants = [
+                "Фаловый угол",
+                "Галсовый угол",
+                "Шкотовый угол",
+           ],
+            RightAnswer = 2
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 9",
+            Variants = [
+          "Грот",
+                "Стаксель",
+                "Латы",
+
+           ],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 10",
+            Variants = [
+    "Нижняя шкаторина",
+                "Задняя шкаторина",
+                "Передняя шкаторина",
+
+           ],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 11",
+            Variants = [
+   "Шкотовыйугол",
+                "Галсовый угол",
+                "Фаловый угол",
+
+           ],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 12",
+            Variants = [
+"Нижняя шкаторина",
+                "Задняя шкаторина",
+                "Передняя шкаторина",
+
+           ],
+            RightAnswer = 2
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 13",
+            Variants = [
+"Нижняя шкаторина",
+                "Задняя шкаторина",
+                "Передняя шкаторина",
+
+           ],
+            RightAnswer = 1
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 14",
+            Variants = [
+      "Грот",
+                "Стаксель",
+                "Латы",
+
+           ],
+            RightAnswer = 2
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/7.jpg",
+            Text = "Выберите название части паруса указанное цифрой 15",
+            Variants = [
+"Шкотовыйугол",
+                "Галсовый угол",
+                "Фаловый угол",
+
+           ],
+            RightAnswer = 2
+        };
+        //  19
+        yield return new SimpleQuestion
+        {
+            Image = "/8.jpg",
+            Text = "Выберите название дельной вещи А",
+            Variants = [
+               "Полуклюз",
+                "Каретка",
+                "Мочка",
+                "Пианино",
+
+           ],
+            RightAnswer = 2
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/8.jpg",
+            Text = "Выберите название дельной вещи В",
+            Variants = [
+         "Полуклюз",
+                "Каретка",
+                "Мочка",
+                "Утка",
+
+           ],
+            RightAnswer = 3
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/8.jpg",
+            Text = "Выберите название дельной вещи С",
+            Variants = [
+                   "Полуклюз",
+                "Каретка",
+                "Пианино",
+                "Утка",
+
+           ],
+            RightAnswer = 0
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/8.jpg",
+            Text = "Выберите название дельной вещи D",
+            Variants = [
+          "Полуклюз",
+                "Каретка",
+                "Мочка",
+                "Пианино",
+
+           ],
+            RightAnswer = 3
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/8.jpg",
+            Text = "Выберите название дельной вещи Е",
+            Variants = [
+         "Полуклюз",
+                "Каретка",
+                "Мочка",
+                "Пианино",
+
+           ],
+            RightAnswer = 1
+        };
+        yield return new SimpleQuestion
+        {
+            Image = "/8.jpg",
+            Text = "Выберите название дельной вещи F",
+            Variants = [
+           "Полуклюз",
+                "Блоки",
+                "Утка",
+                "Пианино",
+
+           ],
+            RightAnswer = 1
+        };
+        //  20
+        yield return new SimpleQuestion
+        {
+            Image = null,
+            Text = "Для чего нужен рефлектор на яхте?",
+            Variants = [
+               "Средство борьбы с затоплением",
+                "Средство для идентификации яхты на радарах других судов",
+                "Средство определения месторасположения судна",
+                "Средство для идентификации препятствий на пути судна",
+
+           ],
+            RightAnswer = 1
+        };
+        //  21
+        yield return new SimpleQuestion
+        {
+            Image = null,
+            Text = "Ваше судно терпит бедствие ясной ночью недалеко от судоходного маршрута. Какое средство пиротехники вы используете для подачи сигнала SOS?",
+            Variants = [
+              "Фальшвеер",
+             "Дымовая шашка",
+             "Красная парашютная ракета",
+            "Белая ракета",
+           ],
+            RightAnswer = 2
+        };
+        //  22
+        yield return new SimpleQuestion
+        {
+            Image = null,
+            Text = "Сколько ракет вы будете выпускать для привлечения внимания и с каким интервалом?",
+            Variants = [
+             "Две ракеты с интервалом в 2 минуты",
+          "Три ракеты с интервалом в минуту",
+           "Одну ракету",
+           "Две ракеты с интервалом в минуту",
+
+           ],
+            RightAnswer = 1
+        };
+        //  23
+        yield return new MultiAnswerQuestion
+        {
+            Image = null,
+            Text = "В каких случаях и кто может подать сигнал MayDay на яхте?",
+            Variants = [
+               "Только капитан",
+               "Любой член экипажа",
+               "Экипаж, если капитан не может исполнять свои функции",
+               "Капитан или член экипажа по просьбе капитана",
+           ],
+            RightAnswers = [2, 3]
+        };
+        //  24
+        yield return new MultiAnswerQuestion
+        {
+            Image = null,
+            Text = "Когда нажимают кнопку передачи сигнала сос-Distress на укв радиостанции?",
+            Variants = [
+               "В случае возникновения чп",
+               "Когда экипаж чувствует приближение беды",
+               "По прямому указанию капитана",
+               "При неминуемой угрозе жизни",
+               "Когда капитан не адекватен",
+
+           ],
+            RightAnswers = [2, 3]
+        };
+        //  24
+        yield return new MultiAnswerQuestion
+        {
+            Image = null,
+            Text = "Какими способами можно подать сигнал MAYDAY на яхте?",
+            Variants = [
+            "Флагами Novemer Golf",
+            "С помощью укв станции",
+            "С помощью пиротехники",
+            "С помощью электронной навигации",
+            "С помощью последовательного взмаха рук",
+
+
+           ],
+            RightAnswers = [1, 2, 4]
         };
     }
 }
