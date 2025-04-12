@@ -94,6 +94,9 @@ async Task HandleCommand(long userId, string command)
         case "/start":
             await HandleStartCommand(userId);
             break;
+        case "/skip":
+            await HandleSkipCommand(userId);
+            break;
     }
 
     await Task.CompletedTask;
@@ -170,14 +173,7 @@ async Task VerifyAnswer(long userId, string text)
 
         await SendCorrectAnswer(userId);
 
-        if (manager.MoveNext(userId))
-        {
-            await SendCurrentQuestion(userId);
-        }
-        else
-        {
-            await SendTestingDone(userId);
-        }
+        await MoveToNextQuestion(userId);
     }
     catch (TestNotStartedException)
     {
@@ -200,11 +196,6 @@ Task HandleButton(CallbackQuery query)
     return Task.CompletedTask;
 }
 
-async Task SendTestingDone(long userId)
-{
-    await bot.SendMessage(userId, "Поздравляю, вы прошли тест!", ParseMode.Html, replyMarkup: new ReplyKeyboardRemove());
-}
-
 async Task SendCorrectAnswer(long userId)
 {
     await bot.SendMessage(userId, "\ud83d\udc4dПравильно!", ParseMode.Html);
@@ -222,7 +213,38 @@ async Task HandleStartCommand(long userId)
     await SendCurrentQuestion(userId);
 }
 
+async Task HandleSkipCommand(long userId)
+{
+    try
+    {
+        await MoveToNextQuestion(userId);
+    }
+    catch (TestNotStartedException)
+    {
+        await HandleStartCommand(userId);
+    }
+}
+
 async Task SendGreetings(long userId)
 {
     await bot.SendMessage(userId, "<b>Добро пожаловать в тест!</b>\n\nДавай проверим твои знания.", ParseMode.Html);
 }
+
+async Task MoveToNextQuestion(long l)
+{
+
+    if (manager.MoveNext(l))
+    {
+        await SendCurrentQuestion(l);
+    }
+    else
+    {
+        await SendTestingDone(l);
+    }
+}
+
+async Task SendTestingDone(long userId)
+{
+    await bot.SendMessage(userId, "Поздравляю, вы прошли тест!", ParseMode.Html, replyMarkup: new ReplyKeyboardRemove());
+}
+
