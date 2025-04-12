@@ -258,5 +258,6 @@ async Task SendPlanktonich(long userId)
 {
     var sticker = (await bot.GetStickerSet("ozero")).Stickers[44];
     await bot.SendSticker(userId, InputFile.FromFileId(sticker.FileId));
+    await bot.SendSticker(userId, InputFile.FromFileId(sticker.FileId));
 }
 
