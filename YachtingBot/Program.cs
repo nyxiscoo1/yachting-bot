@@ -256,8 +256,10 @@ async Task SendTestingDone(long userId)
 
 async Task SendPlanktonich(long userId)
 {
-    var sticker = (await bot.GetStickerSet("ozero")).Stickers[44];
-    await bot.SendSticker(userId, InputFile.FromFileId(sticker.FileId));
-    await bot.SendSticker(userId, InputFile.FromFileId(sticker.FileId));
+    var fullPath = BuildImagePath("/undefined_agadjxcaalce2us.webp");
+    using var stream = File.OpenRead(fullPath);
+    var image = InputFile.FromStream(stream);
+
+    await bot.SendSticker(userId, image);
 }
 
