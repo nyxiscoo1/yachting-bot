@@ -761,7 +761,7 @@ public class QuestionSource
         // 3-3
         yield return new MatchingQuestion
         {
-            Text = "Какие средства безопасности предназначены для борьбы с каким типом ЧП",
+            Text = "Определите тип жилета и его свойства",
             Variants = new Dictionary<string, string>
             {
                 ["/3-3_1.jpg"] = "Подходит для водных видов спорта",
