@@ -17,7 +17,8 @@ public class SimpleQuestion : ISerializedQuestion
             RightAnswers = [Variants[RightAnswer].Trim()],
             Variants = Variants.Select(v => v.Trim()).ToArray(),
             AnswerThreshold = null,
-            NoKeyboard = false
+            NoKeyboard = false,
+            FixedAnswerOrder = false
         };
     }
 }

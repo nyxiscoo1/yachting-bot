@@ -10,6 +10,7 @@ public class QuestionInfo
     public required IReadOnlyList<string> Variants { get; init; }
     public required int AnswerThreshold { get; init; }
     public required bool NoKeyboard { get; init; }
+    public required bool FixedAnswerOrder { get; init; }
 
     private HashSet<string> _answers = new();
 
@@ -31,6 +32,11 @@ public class QuestionInfo
 
     private bool IsRightAnswer(string text)
     {
+        if (FixedAnswerOrder)
+        {
+            return RightAnswers[_answers.Count].ToLowerInvariant() == text.ToLowerInvariant();
+        }
+
         return RightAnswers.Select(x => x.ToLowerInvariant()).Contains(text.ToLowerInvariant());
     }
 }

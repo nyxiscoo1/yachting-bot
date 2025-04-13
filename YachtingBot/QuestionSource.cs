@@ -733,19 +733,14 @@ public class QuestionSource
             RightAnswer = 1
         };
 
-        // 3-1
-        //yield return new MatchingQuestion
-        //{
-        //    Text = "Расставьте возможные ЧП по степени вероятности наступления на борту яхты. Первым - наиболее вероятное событие.",
-        //    Variants = new Dictionary<string, string>
-        //    {
-        //        ["Пожар"] = "STCW",
-        //        ["МОВ (человек за бортом)"] = "GMDSS",
-        //        ["Травма членов экипажа"] = "COLREG",
-        //        ["Затопление"] = "SOLAS",
-        //        ["Критические поломки"] = "SOLAS",
-        //    }
-        //};
+        // 3 - 1
+        yield return new MultiAnswerQuestion
+        {
+            Text = "Расставьте возможные ЧП по степени вероятности наступления на борту яхты. Первым - наиболее вероятное событие.",
+            Variants = ["Пожар", "МОВ (человек за бортом)", "Травма членов экипажа", "Затопление", "Критические поломки"],
+            RightAnswers = [2, 1, 0, 3, 4],
+            FixedAnswerOrder = true
+        };
 
         // 3-2
         yield return new MatchingQuestion

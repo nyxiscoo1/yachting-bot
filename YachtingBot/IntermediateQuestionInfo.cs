@@ -9,4 +9,5 @@ public class IntermediateQuestionInfo
     public required IReadOnlyList<string> Variants { get; init; }
     public required int? AnswerThreshold { get; init; }
     public required bool NoKeyboard { get; init; }
+    public required bool FixedAnswerOrder { get; init; }
 }

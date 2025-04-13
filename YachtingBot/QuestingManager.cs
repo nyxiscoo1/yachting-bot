@@ -31,7 +31,8 @@ public class QuestingManager
                 RightAnswers = q.RightAnswers,
                 Variants = shuffledVariants,
                 AnswerThreshold = q.AnswerThreshold ?? q.RightAnswers.Length,
-                NoKeyboard = q.NoKeyboard
+                NoKeyboard = q.NoKeyboard,
+                FixedAnswerOrder = q.FixedAnswerOrder
             });
         }
         return result;

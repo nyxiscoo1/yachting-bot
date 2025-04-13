@@ -8,6 +8,7 @@ public class MultiAnswerQuestion : ISerializedQuestion
     public required int[] RightAnswers { get; init; }
     public int? AnswerThreshold { get; init; }
     public bool NoKeyboard { get; init; }
+    public bool FixedAnswerOrder { get; init; }
 
     public IEnumerable<IntermediateQuestionInfo> ToQuestions()
     {
@@ -19,7 +20,8 @@ public class MultiAnswerQuestion : ISerializedQuestion
             RightAnswers = RightAnswers.Select(a=> Variants[a].Trim()).ToArray(),
             Variants = Variants.Select(v => v.Trim()).ToArray(),
             AnswerThreshold = AnswerThreshold,
-            NoKeyboard = NoKeyboard
+            NoKeyboard = NoKeyboard,
+            FixedAnswerOrder = FixedAnswerOrder
         };
     }
 }

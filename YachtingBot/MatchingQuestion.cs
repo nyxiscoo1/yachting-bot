@@ -16,7 +16,8 @@ public class MatchingQuestion : ISerializedQuestion
             RightAnswers = [x.Value.Trim()],
             Variants = Variants.Select(v => v.Value.Trim()).ToArray(),
             AnswerThreshold = null,
-            NoKeyboard = false
+            NoKeyboard = false,
+            FixedAnswerOrder = false
         });
     }
 }
