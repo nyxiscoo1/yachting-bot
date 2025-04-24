@@ -1699,7 +1699,7 @@ public class QuestionSource
         };
 
         // 74
-        yield return new SimpleQuestion
+        yield return new MultiAnswerQuestion
         {
             Image = "/21.jpg",
             Text = "Определите Характеристику и период огня на рисунке?",
